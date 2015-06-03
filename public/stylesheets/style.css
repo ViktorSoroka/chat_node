@@ -1,0 +1,119 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    font: 13px Helvetica, Arial;
+}
+
+form {
+    background-color: #fff;
+    padding: 21px 8px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: block;
+}
+
+form textarea {
+    height: 50px;
+    float: left;
+    width: 90%;
+    border: 0;
+    box-shadow: inset 0 0 3px;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+form button {
+    display: block;
+    height: 50px;
+    float: right;
+    width: 9%;
+    box-shadow: inset 0 0 3px;
+    border-radius: 3px;
+    border: none;
+    background-color: aquamarine;
+}
+
+#messages {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 90%;
+    overflow-y: auto;
+}
+
+#messages li {
+    display: block;
+    padding: 5px 10px;
+    margin: 10px 10px 5px;
+    box-shadow: 0 0 3px;
+    background-color: #C7EDFC;
+    color: #7266A6;
+    word-wrap: break-word;
+}
+
+form button {
+    width: 9.6%;
+    box-shadow: inset 0 0 3px;
+    border-radius: 3px;
+    border: none;
+    padding: 10px;
+    background-color: aquamarine;
+}
