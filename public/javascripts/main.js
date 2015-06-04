@@ -1,16 +1,14 @@
 (function () {
 
-    var $messages = $("#messages"),
-        $send = $('#send'),
-        insertQuestion = function (question) {
-            var newQuestion = document.createElement('li');
-            newQuestion.innerHTML = question;
+    var insertQuestion = function (question) {
+        var newQuestion = document.createElement('li');
+        newQuestion.innerHTML = question;
 
-            var questions = document.getElementsByTagName('ul')[0];
-            return questions.appendChild(newQuestion);
-        },
+        var questions = document.getElementsByTagName('ul')[0];
+        return questions.appendChild(newQuestion);
+    };
 
-        server = io();
+    var server = io();
 
     server.on('connect', function () {
         var nickname = prompt('write your name', 'some user');
@@ -21,21 +19,11 @@
         insertQuestion(question);
     });
 
-    $send.on('click', function (e) {
+    document.getElementById('send').addEventListener('click', function (e) {
         e.preventDefault();
         var message = document.getElementById('m').value;
-        if (message) {
-            server.emit('message_chat', message);
-            document.getElementById('m').value = '';
-            $messages.animate({scrollTop: $messages[0].scrollHeight}, 100);
-        }
-    });
-
-    $('body').on('keyup', function (e) {
-        if (e.ctrlKey) {
-            $send.trigger('click');
-            return false;
-        }
-    });
+        server.emit('message_chat', message);
+        document.getElementById('m').value = '';
+    }, false);
 
 }());
